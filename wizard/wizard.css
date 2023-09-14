@@ -1,0 +1,107 @@
+ul{
+    margin: 0 auto;
+    padding: 0;
+    width: 280px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    position: relative;
+    z-index: 2;
+}
+
+
+ul li{
+    list-style: none;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    font-size: 30px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #fff;
+    background-color: #000;
+    z-index: 3;
+}
+
+
+ul::before{
+    width: 100%;
+    height: 4px;
+    top: 45%;
+    z-index: 1;
+    content: "";
+    left: 0;
+    position: absolute;
+    background-color: gray;
+}
+
+ul::after{
+    position: absolute;
+    width: 0%;
+    height: 4px;
+    top: 45%;
+    z-index: 1;
+    content: "";
+    left: 0;
+    background-color: #ff4d00;
+}
+
+ul.num2::after{
+    width: 33%;
+}
+
+ul.num3::after{
+    width: 66%;
+}
+
+
+ul.num4::after{
+    width: 99.999999999%;
+}
+
+
+ul li.active{
+    background-color: #ff4d00;
+    color: #000;
+}
+
+.container{
+    width: 100%;
+    max-width: 1650px;
+    margin: 40px auto;
+    height: 600px;
+    border: 2px solid #000;
+}
+
+
+.step{
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    display: none;
+    padding: 40px;
+}
+
+h2{
+    color: #ff4d00;
+    font-size: 40px;
+}
+
+p{
+    font-size: 20px;
+    color: #4d4a4a;
+    max-width: 90%;
+}
+
+.step.active{
+    display: block;
+}
+
+button{
+    padding: 10px 30px;
+    border-radius:20px;
+    border: none;
+    background-color: #000;
+    color: #fff;
+}
